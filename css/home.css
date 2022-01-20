@@ -66,3 +66,16 @@ body{
     background: black;
 }
 
+#about{
+    width: 100%;
+    height:  calc(100vh - 60px);
+    position: relative;
+    background-image: url(../pic/environment.jpg);
+}
+#search{
+    width: 100%;
+    height:  calc(100vh - 60px);
+    position: relative;
+    background-image: url(../pic//wrong.jpg);
+    background-attachment: fixed;
+}
