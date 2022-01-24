@@ -66,43 +66,25 @@ body{
     background: black;
 }
 
-#about{
+#introduce{
     width: 100%;
-    height:  calc(100vh - 60px);
-    position: relative;
-    background-image: url(../pic/environment.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 50%;
+    background-image: linear-gradient(45deg, #74ebd5 0%, #9face6 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-#search{
+.text{
+    position: relative;
+    font-family: Microsoft YaHei;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height:  calc(100vh - 60px);
-    position: relative;
-    background-image: url(../pic//wrong.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-
-#enviroment{
-    position: relative;
-    width: 600px;
-    height: 300px;
-    border: solid;
-}
-#social{
-    position: absolute;
-    width: 600px;
-    height: 300px;
-    border: solid;
-    bottom: 0px;
-    right: 0px;
-}
-#governance{
-    position: absolute;
-    width: 600px;
-    height: 300px;
-    border: solid;
-    bottom: 0px;
-    left: 0px;
+.text p{
+    color: white;
+    font-size: 24px;
 }
