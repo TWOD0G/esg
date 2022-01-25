@@ -70,12 +70,26 @@ body{
 #introduce_up{
     width: 100%;
     height: 50%;
-    background-image: linear-gradient(45deg, #74ebd5 0%, #9face6 100%);
+    background-image: linear-gradient(45deg, #74ebd5, #9face6, #f6d365, #fda085, #fccb90, #d57eeb, #74ebd5, #9face6, #f6d365, #fda085, #fccb90, #d57eeb);
+    background-size: 440%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: turn_color 30s linear infinite;
 }
+@keyframes turn_color{
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+
 .text{
     position: relative;
     font-family: Microsoft YaHei;
@@ -112,6 +126,5 @@ body{
     width: 100%;
     height: 50%;
     position: relative;
-    background-color: rgba(63, 63, 65, 0.726);
     margin-top: 0px;
 }
