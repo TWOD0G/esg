@@ -139,11 +139,11 @@ body{
     margin-top: 0px;
     display: flex;
     justify-content:space-around;
+    background-color: rgb(58, 58, 66);
 }
 
 .down_box{
     position: relative;
-    border: solid 2px;
     border-radius: 10px;
     width: 16%;
     height: 0px;
@@ -152,6 +152,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: blur(12px);
+    transition: filter 0.8s, opacity 0.8s;
+    opacity: 0.2;
+    background-image: linear-gradient(#74ebd5, #9face6);
+}
+.down_box:hover{
+    filter: blur(0px);
+    opacity: 1;
 }
 .image{
     width: 20%;
@@ -165,13 +173,34 @@ body{
     background-size: 50%;
     background-position: center;
 }
-#introduce_down :nth-child(1) .image{
-    background-image: url(../pic/公司.png);
+.down_box:nth-child(1) .image{
+    background-image: url(../pic/Environmental.png);
 }
-#introduce_down :nth-child(2) .image{
-    background-image: url(../pic/环境管理.png);
+.down_box:nth-child(2) .image{
+    background-image: url(../pic/Social.png);
 }
-#introduce_down :nth-child(3) .image{
-    background-image: url(../pic/社会评价.png);
+.down_box:nth-child(3) .image{
+    background-image: url(../pic/Governance.png);
 }
-
+.down_title{
+    position: relative;
+    margin-top: 48%;
+    font-family: dream;
+    font-size: 24px;
+}
+@media screen and (max-width:1024px){
+    .down_title{
+        font-size: 12px;
+    }
+}
+.down_title_ch{
+    position: relative;
+    margin-top: 32%;
+    font-family: STXingkai;
+    font-size: 24px;
+}
+@media screen and (max-width:1024px){
+    .down_title_ch{
+        font-size: 12px;
+    }
+}
