@@ -1,7 +1,9 @@
 body{
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
+/* 导航栏样式 */
 #nav{
     position: relative;
     width: 100%;
@@ -9,7 +11,7 @@ body{
     background-color: rgb(58, 58, 66);
     display: flex;
     justify-content: center;
-    z-index: 0;
+    z-index: 3;
     min-width: 600px;
 }
 @media screen and (max-width:1024px){
@@ -60,29 +62,21 @@ body{
 }
 
 
-#mention{
-    width: 100vw;
-    height: calc(100vh - 60px);
-    position:relative;
-    z-index: 1;
-    min-width: 600px;
-    overflow: scroll;
-}
-#mention::-webkit-scrollbar{
+body::-webkit-scrollbar{
     width: 5px;
     height: 100%;
 }
-#mention::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb{
     border-radius: 50%;
     background-color: white;
 }
-#mention::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track{
     background: black;
 }
-
+/* ESG介绍板块样式 */
 #introduce_up{
     width: 100%;
-    height: 50%;
+    height: calc((100vh - 60px) * 0.5);
     background-image: linear-gradient(45deg, #74ebd5, #9face6, #f6d365, #fda085, #fccb90, #d57eeb, #74ebd5, #9face6, #f6d365, #fda085, #fccb90, #d57eeb);
     background-size: 440%;
     display: flex;
@@ -141,7 +135,7 @@ body{
 }
 #introduce_down{
     width: 100%;
-    height: 50%;
+    height: calc((100vh - 60px) * 0.5);
     position: relative;
     margin-top: 0px;
     display: flex;
@@ -162,7 +156,8 @@ body{
     align-items: center;
     justify-content: space-around;
     filter: blur(6px);
-    transition: filter 0.6s, opacity 0.6s;
+    left: 100%;
+    transition: filter 0.6s, opacity 0.6s, left 1.2s ease-out;
     opacity: 0.1;
     background-image: linear-gradient(#74ebd5, #9face6);
 }
@@ -212,6 +207,7 @@ body{
         font-size: 12px;
     }
 }
+/* ESG资讯板块样式 */
 #search{
     width: 100%;
     height: 100%;
