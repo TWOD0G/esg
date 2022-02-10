@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 100px;
+        font-family: "Baskerville Old Face";
+      }
+
+      .cls-1, .cls-2 {
+        fill: #464646;
+      }
+
+      .cls-2 {
+        font-size: 50px;
+        font-family: "Acumin Variable Concept";
+      }
+    </style>
+  </defs>
+  <text id="E" class="cls-1" x="89" y="126.723">E</text>
+  <text id="S" class="cls-1" x="145" y="128">S</text>
+  <text id="G" class="cls-1" x="190" y="129">G</text>
+  <text id="zh" class="cls-2" x="283" y="130">zh</text>
+</svg>

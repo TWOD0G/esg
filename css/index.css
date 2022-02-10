@@ -1,23 +1,24 @@
+@font-face {
+    font-family: dream;
+    src: url(../font/CaviarDreams.ttf);
+}
+
 body{
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
 }
 /* 导航栏样式 */
 #nav{
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 60px;
     background-color: rgb(58, 58, 66);
     display: flex;
     justify-content: center;
     z-index: 3;
-    min-width: 600px;
 }
 @media screen and (max-width:1024px){
-    #nav{
-        height: 48px;
-    }
+
 }
 #nav ul{
     display: flex;
@@ -39,17 +40,13 @@ body{
     justify-content: center;
     transition: background-color 1.2s;
 }
-@media screen and (max-width:1024px){
-    #nav ul li{
-        width: 25%;
-        font-size: 8px;
-    }
-}
+
 #nav ul li a{
     text-decoration:none;
     color: white;
     transition:  border-bottom 1.2s;
     padding: 5px;
+    user-select: none;
 }
 #nav ul li a:visited{
     color:white;
@@ -75,8 +72,9 @@ body::-webkit-scrollbar-track{
 }
 /* ESG介绍板块样式 */
 #introduce_up{
+    position: relative;
     width: 100%;
-    height: calc((100vh - 60px) * 0.5);
+    height: 50vh;
     background-image: linear-gradient(45deg, #74ebd5, #9face6, #f6d365, #fda085, #fccb90, #d57eeb, #74ebd5, #9face6, #f6d365, #fda085, #fccb90, #d57eeb);
     background-size: 440%;
     display: flex;
@@ -84,7 +82,7 @@ body::-webkit-scrollbar-track{
     align-items: center;
     justify-content: center;
     animation: turn_color 30s linear infinite;
-    min-height: 240px;
+    min-height: 320px;
     max-height: 600px;
 }
 @keyframes turn_color{
@@ -101,12 +99,16 @@ body::-webkit-scrollbar-track{
 
 .text{
     position: relative;
-    margin-top: 16px;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: auto;
     justify-content: space-between;
+    margin-bottom: 40px;
+    user-select: none;
+}
+.text:nth-child(1){
+    margin-top: 72px;
 }
 .text > p{
     color: white;
@@ -115,12 +117,9 @@ body::-webkit-scrollbar-track{
     margin-bottom: 1%;
     position: relative;
     font-family: dream;
+    transition: all 1.5s;
 }
-@media screen and (max-width:1024px){
-    .text > p{
-        font-size: 16px;
-    }
-}
+
 .text > p:nth-child(1){
     position: relative;
     left: 16%;
@@ -129,20 +128,17 @@ body::-webkit-scrollbar-track{
     position: relative;
     right: 16%;
 }
-@font-face {
-    font-family: dream;
-    src: url(../font/CaviarDreams.ttf);
-}
+
 #introduce_down{
     width: 100%;
-    height: calc((100vh - 60px) * 0.5);
+    height: 50vh;
     position: relative;
     margin-top: 0px;
     display: flex;
     justify-content:space-around;
     background-color: rgb(58, 58, 66);
     min-height: 240px;
-    max-height: 600px
+    overflow-x: hidden;
 }
 
 .down_box{
@@ -150,7 +146,7 @@ body::-webkit-scrollbar-track{
     border-radius: 10px;
     width: 16%;
     height: 80%;
-    margin-top: 2%;
+    margin-top: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,6 +156,7 @@ body::-webkit-scrollbar-track{
     transition: filter 0.6s, opacity 0.6s, left 1.2s ease-out;
     opacity: 0.1;
     background-image: linear-gradient(#74ebd5, #9face6);
+
 }
 .down_box:hover{
     filter: blur(0px);
@@ -190,29 +187,134 @@ body::-webkit-scrollbar-track{
     position: relative;
     font-family: dream;
     font-size: 24px;
+    user-select: none;
 }
-@media screen and (max-width:1024px){
-    .down_title{
-        font-size: 12px;
-    }
-}
+
 .down_title_ch{
     position: relative;
     bottom: 1%;
     font-family: STXingkai;
     font-size: 24px;
+    user-select: none;
 }
+
+/* ESG资讯板块样式 */
+#message{
+    position: relative;
+    width: 100%;
+    height: 1024px;
+    overflow-x: auto;
+    background-image: linear-gradient(to right, #74ebd5, #9face6);
+}
+#m_lbox{
+    width: 1440px;
+    position: absolute;
+    height: 720px;
+    margin-left: calc(50% - 720px);
+    transform: translateY(-50%);
+    top: 50%;
+    /* background-color: rgba(255, 0, 0, 0.111); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.m_lb_box{
+    width: 30%;
+    height: 40%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 15px;
+    background-color: white;
+    /* box-shadow: 10px 10px 50px #888888; */
+    transition: all 0.5s;
+}
+.m_lb_box:nth-child(2) .img_box img{
+    width: 250px;
+    height: 150px;
+}
+.m_lb_box:nth-child(3) .img_box img{
+    width: 296px;
+    height: 98px;
+}
+.m_lb_box:nth-child(4) .img_box img{
+    width: 150px;
+    height: 150px;
+}
+.m_lb_box:nth-child(5) .img_box img{
+    width: 400px;
+    height: 200px;
+}
+.m_lb_box:nth-child(6) .img_box img{
+    width: 300px;
+    height: 150px;
+}
+.m_lb_box:hover{
+    box-shadow: 20px 20px 40px #888888;
+}
+
+.img_box{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_box img{
+    width: 202px;
+    height:66px;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:1024px){
+    .down_title{
+        font-size: 12px;
+    }
     .down_title_ch{
         font-size: 12px;
     }
-}
-/* ESG资讯板块样式 */
-#search{
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    .text > p{
+        font-size: 16px;
+    }
+    #nav ul li{
+        width: 25%;
+        font-size: 8px;
+    }
+    #nav{
+        height: 48px;
+    }
+    #introduce_down{
+        height: 150vh;
+        flex-direction: column;
+        align-items: center;
+    }
+    .down_box{
+        width: 64%;
+        height: 30%;
+    }
 }
